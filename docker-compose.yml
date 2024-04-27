@@ -9,7 +9,7 @@ services:
       - "5672:5672"  # порт для AMQP
       - "15672:15672"  # порт для управляющего интерфейса
     volumes:
-      - ./rabbitmq_data:/var/lib/rabbitmq  # сохраняем данные на диске
+      - /var/lib/rabbitmq  # сохраняем данные на диске
     environment:
       - RABBITMQ_DEFAULT_USER=livmq  # имя пользователя
       - RABBITMQ_DEFAULT_PASS=livmq  # пароль
